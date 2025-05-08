@@ -137,6 +137,13 @@
     ),
 )
 
+#let education = (
+    (
+        institution: "Belorussian National Technical University",
+        major: "M.Sc. in Power Engineering, 2009-2015"
+    )
+)
+
 #let public_contributions = (
     (
         title: "Top-5 Itransition Opener 2015 Programming Contest",
@@ -170,5 +177,6 @@
     summary: "Systems Architect and Engineering Leader with over 10 years of experience designing and delivering robust, scalable backend platforms and distributed systems. Expert in Go, Elixir, System Architecture, and Cloud-Native ecosystem. Proven track record in greenfield development, leading high-performing teams, and driving technical strategy in fast-paced environments. Passionate about building fault-tolerant infrastructure and solving complex systems-level challenges.",
     jobs: jobs,
     skills: skills,
+    education: education,
     public_contributions: public_contributions,
 )
