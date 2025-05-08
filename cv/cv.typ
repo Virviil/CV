@@ -1,4 +1,4 @@
-#import "education.typ": education
+#import "education.typ": education_entry
 #import "skill_entries.typ": skill_entries
 #import "pubcontrib.typ": public_contributions_entries
 
@@ -192,6 +192,7 @@
     summary: "I am actively seeking perfect opportunities to apply my knowledge in ML-backed and high-load/Big Data projects.",
     jobs: (),
     skills: (),
+    education: (),
     public_contributions: (),
     hack_font: "FiraCode Nerd Font Mono",
     curvy_font: "Rockwell",
@@ -228,7 +229,7 @@
             inset: 4pt,
         )[
             #skill_entries(skills)
-            #education(hack_font)
+            #education_entry(education, hack_font)
             #public_contributions_entries(public_contributions)
         ],
     )
