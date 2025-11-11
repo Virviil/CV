@@ -3,8 +3,8 @@
 #import "pubcontrib.typ": public_contributions_entries
 
 #let cv_header(
-    name: "Golovach Lena", 
-    title: "Senior Pomidor", 
+    name: "Golovach Lena",
+    title: "Senior Pomidor",
     agenda: "I'm super passionate developer with Web3 intentions",
     color: eastern,
 ) = {
@@ -14,8 +14,8 @@
     ])
     let ntitle = block(
             text(
-                font: "Rockwell", 
-                size: 12pt, 
+                font: "Rockwell",
+                size: 12pt,
                 style: "italic",
                 weight: "extrabold",
                 fill: color.lighten(0%)
@@ -39,17 +39,17 @@
     let place = if job.at("company_url", default: none) != none {
         link(job.company_url)[
             #text(
-                font: hack_font, 
+                font: hack_font,
                 weight: "extrabold",
-                size: 12pt, 
-                style: "italic", 
+                size: 12pt,
+                style: "italic",
             )[#job.company]
-        ]        
+        ]
     } else {
         text(
-            font: curvy_font, 
+            font: curvy_font,
             size: 12pt,
-            style: "italic", 
+            style: "italic",
             // fill: main_color.lighten(30%)
         )[#job.company]
     }
@@ -61,7 +61,7 @@
                 font: hack_font, size: 8pt, weight: "bold"
             )[
                 #job.start_date.display("[month repr:long] [year repr:full]")
-                #raw("-")  
+                #raw("-")
                 #if job.at("end_date", default: none) != none [
                     #job.end_date.display("[month repr:long] [year repr:full]")
                 ] else [Present]
@@ -73,7 +73,7 @@
         width: 100%,
         radius: 3pt,
         outset: 8pt,
-        inset: 0pt, 
+        inset: 0pt,
         fill: white,
         stroke: (
             thickness: 3pt,
@@ -90,8 +90,8 @@
             period,
         )]
         #block(below: 0.3em)[#text(
-            font: curvy_font, 
-            size: 9pt, 
+            font: curvy_font,
+            size: 9pt,
             style: "italic",
             fill: main_color.lighten(0%),
             weight: "extrabold"
@@ -107,7 +107,7 @@
 }
 
 #let jobs_entry(
-    jobs: (), 
+    jobs: (),
     hack_font,
 ) = {
     let color = eastern
@@ -120,7 +120,7 @@
         height: 100%,
         radius: 3pt,
         outset: 8pt,
-        inset: 4pt, 
+        inset: 4pt,
         fill: color.lighten(90%),
     )[#jobs_blocks]
 }
@@ -149,21 +149,21 @@
                 #text(font: font, size: 8pt, weight: "bold")[Email: ]
                 #text(size: 9pt, weight: "light", stretch: 100%)[#link("mailto:"+email)]
             ]
-            
+
         }
         #if mobile != none {
             block(spacing: spacing)[
                 #text(font: font, size: 8pt, weight: "bold")[Phone: ]
                 #text(size: 9pt, weight: "light", stretch: 100%)[#link("tel:"+mobile)]
             ]
-            
+
         }
         #if linkedin != none {
             block(spacing: spacing)[
                 #text(font: font, size: 8pt, weight: "bold")[LinkedIn: ]
                 #text(size: 9pt, weight: "light", stretch: 100%)[#link("https://linkedin.com/in/"+linkedin)[#linkedin]]
             ]
-            
+
         }
         #if github != none {
             block(spacing: spacing)[
@@ -207,13 +207,13 @@
         column-gutter: 16pt,
         row-gutter: 16pt,
         cv_header(
-            name: name, 
-            title: title, 
+            name: name,
+            title: title,
             agenda: summary,
         ),
         cv_contact(
             email: "rubinsteindb@gmail.com",
-            mobile: "054-357-69-69",
+            mobile: "+972(54)-357-69-69",
             linkedin: "virviil",
             github: "virviil",
             website: "https://ilhub.io",
