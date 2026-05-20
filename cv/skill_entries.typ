@@ -49,7 +49,7 @@
                 size: 10pt, 
                 weight: "bold", 
                 fill: main_color
-            )[Skills & Expertise]
+            )[Skills]
         ]
         #skills_block.join(line(length: 100%, stroke: (
             thickness: 3pt,
@@ -59,4 +59,3 @@
         )))
     ]
 }
-
